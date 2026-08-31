@@ -1,5 +1,7 @@
 # AI 化学实践：项目五
 
+项目地址：[https://github.com/2379836379/Artificial-Intelligence-for-Chemistry-Laboratory-2026Summer-PKU](https://github.com/2379836379/Artificial-Intelligence-for-Chemistry-Laboratory-2026Summer-PKU)
+
 本仓库用于保存 AI 化学实践课程项目的实验 notebook、数据、图片、结果和报告文件。项目使用 Python、Jupyter、PyTorch、Scikit-learn、OpenCV 及 Cellpose 等工具，建议在 Windows、Linux 或 WSL 环境中运行。
 
 ## 环境配置
@@ -21,41 +23,6 @@ uv run jupyter lab
 ```
 
 启动 Jupyter 后，在 notebook 的内核选择菜单中选择 `Python (p5)`。
-
-### 使用 Python venv 配置
-
-如果不使用 uv，也可以创建标准 Python 虚拟环境：
-
-```bash
-python -m venv .venv
-# Windows PowerShell
-.\.venv\Scripts\Activate.ps1
-# Linux/macOS
-source .venv/bin/activate
-python -m pip install --upgrade pip
-python -m pip install numpy pandas matplotlib scipy scikit-learn pillow opencv-python cellpose medmnist torch torchvision torchaudio tqdm jupyter ipykernel
-jupyter lab
-```
-
-当前仓库主要依赖由 `pyproject.toml` 管理。若环境中没有安装 notebook 代码使用的扩展包，可补充安装：
-
-```bash
-python -m pip install numpy pandas matplotlib scipy scikit-learn pillow opencv-python cellpose medmnist torch torchvision torchaudio tqdm jupyter ipykernel
-```
-
-Windows PowerShell 中如果禁止执行虚拟环境脚本，可先执行：
-
-```powershell
-Set-ExecutionPolicy -Scope Process Bypass
-```
-
-### 验证环境
-
-```bash
-python -c "import torch, numpy, pandas, matplotlib, scipy, sklearn; print('environment ok'); print('CUDA:', torch.cuda.is_available())"
-```
-
-首次使用某些数据集或模型时，程序可能需要下载数据或模型文件。请确保网络可用，并将大型数据文件放在仓库规定的数据目录中。
 
 ## 仓库结构
 
